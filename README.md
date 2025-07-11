@@ -1,12 +1,122 @@
-# React + Vite
+# 🔐 Firebase Auth App – Email/Password + Google Login
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern authentication app built with **React** and **Firebase**, supporting both **Email/Password** signup/login and **Google OAuth**. Styled with custom CSS for a clean, professional UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- ✅ Email & Password Authentication
+- 🔒 Secure Firebase Auth integration
+- 🔁 Google OAuth Login/Signup
+- 🔥 Firebase Firestore integration
+- 💻 Beautiful Login & Signup UI
+- 🌐 React Router Navigation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **React** (Vite)
+- **Firebase Authentication**
+- **Firestore (Database)**
+- **React Router DOM**
+- **Custom CSS**
+
+---
+
+## 📁 Folder Structure
+
+```
+FIREBASE-GOOGLE-AUTH/
+├── public/
+├── src/
+│ ├── app/
+│ ├── assets/
+│ ├── components/
+│ │ ├── Login.jsx
+│ │ └── Signup.jsx
+│ ├── firebase/
+│ │ └── config.js
+│ ├── App.css
+│ ├── App.jsx
+│ ├── Login.css
+│ └── main.jsx
+├── index.html
+├── vite.config.js
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/FIREBASE-GOOGLE-AUTH.git
+cd FIREBASE-GOOGLE-AUTH
+```
+
+### 3. Configure Firebase
+
+Go to Firebase Console
+
+Create a new project
+
+Enable Authentication:
+
+Email/Password
+
+Google Sign-In
+
+Create a Firestore database
+
+Copy the config into: src/firebase/config.js
+
+```
+import { initializeApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_BUCKET",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
+export const provider = new GoogleAuthProvider();
+export const db = getFirestore(app);
+```
+
+## 🤝 Contribute
+
+---
+
+### 🔁 Next Steps
+
+- ✅ Replace `pokaljainam24` with your GitHub username
+- ✅ Add preview screenshots in `src/assets/` as `signup-preview.png` and `login-preview.png`
+- ✅ Push to GitHub:
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/your-username/FIREBASE-GOOGLE-AUTH.git
+git push -u origin main
+```
+
+## 🧑‍💻 Author
+Jainam Pokal
+ - 📧 pokaljainam24
+ - 🌐 GitHub: @your-username
